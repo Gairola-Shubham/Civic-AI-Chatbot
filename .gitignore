@@ -1,0 +1,64 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Python environment files
+.python-version
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+*.code-workspace
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Large Project Data
+# =========================
+
+# Raw PDFs
+data_raw/
+
+# Processed extracted text
+data_processed/
+
+# Chunk files
+data_chunks.json
+
+# Vector database files
+faiss_index.bin
+metadata.json
+
+# Any embeddings / index files
+*.index
+*.faiss
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.bak
+*.swp

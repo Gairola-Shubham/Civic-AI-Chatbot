@@ -209,3 +209,105 @@ https://dpcc.delhigovt.nic.in
 git clone https://github.com/your-username/civic-ai-chatbot.git
 cd civic-ai-chatbot
 ```
+---
+
+## 2️⃣ Create a virtual environment
+```bash
+python -m venv venv
+```
+
+Activate it
+
+### Windows
+```bash
+venv\Scripts\activate
+```
+---
+
+## 3️⃣ Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 4️⃣ Install Tesseract OCR
+
+Download and install from:  
+https://github.com/tesseract-ocr/tesseract  
+
+Install Hindi language pack as well.
+
+---
+
+## 5️⃣ Run the chatbot
+```bash
+streamlit run app.py
+```
+
+---
+
+# ▶️ Running the Chatbot
+
+Open in browser:
+```bash
+http://localhost:8501
+```
+
+---
+
+# 📌 Example Queries
+
+Civic AI can answer queries such as:
+
+* What is Delhi's education budget for 2024?  
+* What measures has Delhi taken to control pollution?  
+* What is the Yamuna cleaning plan?  
+* Delhi EV policy  
+* दिल्ली में शिक्षा बजट कितना है?  
+
+---
+
+# 🧠 How It Works
+
+1. The system processes government PDFs and extracts text.
+
+2. Text is divided into smaller chunks.
+
+3. Each chunk is converted into embeddings.
+
+4. FAISS stores embeddings for fast retrieval.
+
+5. User queries are matched with relevant chunks.
+
+6. The LLM generates answers based on retrieved context.
+
+---
+
+# 🔮 Future Improvements
+
+Possible upgrades for the system:
+
+* 🌐 Online deployment  
+* 🔍 Better query filtering  
+* 📄 Improved document coverage  
+* 💻 Enhanced UI  
+
+---
+
+# 🎯 Purpose of This Project
+
+This project was built to:
+
+* Apply **AI to real-world government data**
+* Build a **RAG-based chatbot system**
+* Improve **public data accessibility**
+* Demonstrate **end-to-end AI pipeline development**
+
+---
+
+# 👥 Team
+
+- Shubham Gairola  
+- Amar Bammi  
+- Rishita  

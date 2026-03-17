@@ -139,6 +139,8 @@ Civic-AI-Chatbot
 │ ├── prepare_chunks.py
 │ ├── build_vector_db.py
 │ ├── query_engine_llm.py
+│ ├── full_pipeline.py
+│ ├── classify_pdfs.py
 │
 ├── app.py # Streamlit chatbot interface
 ├── data_raw/ # Raw PDFs (not uploaded)

@@ -104,7 +104,7 @@ Delhi's Electric Vehicle Policy focuses on promoting electric mobility, reducing
 
 ---
 
-## ⚙️ Setup Ollama
+# ⚙️ Setup Ollama
 
 Install **Ollama**:
 

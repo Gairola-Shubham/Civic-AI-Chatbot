@@ -205,3 +205,8 @@ https://dpcc.delhigovt.nic.in
 # 📦 Installation
 
 ## 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/civic-ai-chatbot.git
+
+cd civic-ai-chatbot
+```

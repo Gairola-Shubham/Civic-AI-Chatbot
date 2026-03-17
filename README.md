@@ -131,3 +131,18 @@ Using a local AI model provides:
 ---
 
 # 📂 Project Structure
+```text
+Civic-AI-Chatbot
+│
+├── scripts/
+│ ├── extract_and_clean.py
+│ ├── prepare_chunks.py
+│ ├── build_vector_db.py
+│ ├── query_engine_llm.py
+│
+├── app.py # Streamlit chatbot interface
+├── data_raw/ # Raw PDFs (not uploaded)
+├── data_processed/ # Extracted text
+├── requirements.txt
+└── README.md
+```

@@ -21,3 +21,35 @@ This project demonstrates how to combine **OCR, embeddings, vector databases, an
 **Source**: Budget Speech 2024–25
 
 ---
+
+# ✨ Features
+
+### 🔍 Semantic Search
+
+* Finds relevant information using **meaning-based search**, not just keywords
+
+### 🤖 AI Answer Generation
+
+* Uses **Mistral LLM** to generate human-like responses
+
+### 🌐 Multilingual Support
+
+* Supports both **Hindi and English queries**
+
+### 📄 Source Citation
+
+* Displays document references for transparency
+
+### 💻 Web Chatbot Interface
+
+* Built using **Streamlit**
+
+### ⚡ Fast Retrieval
+
+* Uses **FAISS vector database** for efficient search
+
+---
+
+# 🏗️ Architecture
+
+Civic AI follows a **Retrieval-Augmented Generation (RAG)** pipeline:

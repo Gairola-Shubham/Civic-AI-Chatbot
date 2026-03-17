@@ -111,4 +111,6 @@ Install **Ollama**:
 https://ollama.com
 
 Pull the model:
+```bash
 ollama pull mistral
+```

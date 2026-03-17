@@ -71,3 +71,29 @@ LLM (Mistral via Ollama)
 ↓
 Streamlit Chatbot
 ```
+---
+
+# ⚙️ Technologies Used
+
+| Technology              | Purpose                          |
+|------------------------|----------------------------------|
+| Python                 | Core programming language        |
+| PyMuPDF                | PDF text extraction              |
+| Tesseract OCR          | Extract text from scanned PDFs   |
+| Sentence Transformers  | Generate embeddings              |
+| FAISS                  | Vector similarity search         |
+| Ollama                 | Run LLM locally                  |
+| Mistral                | Language model                   |
+| Streamlit              | Web interface                    |
+
+---
+
+# 🧠 AI Integration (Ollama)
+
+Civic AI uses a **local AI model** powered by **Ollama**.
+
+This allows the chatbot to behave like a real AI system instead of relying only on predefined responses.
+
+### Example
+
+User:

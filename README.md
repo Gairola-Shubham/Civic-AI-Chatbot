@@ -96,4 +96,19 @@ This allows the chatbot to behave like a real AI system instead of relying only 
 
 ### Example
 
-User:
+**User:**
+What is Delhi's EV policy?
+
+**Assistant:**
+Delhi's Electric Vehicle Policy focuses on promoting electric mobility, reducing pollution, and providing incentives for EV adoption.
+
+---
+
+## ⚙️ Setup Ollama
+
+Install **Ollama**:
+
+https://ollama.com
+
+Pull the model:
+ollama pull mistral

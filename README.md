@@ -53,3 +53,21 @@ This project demonstrates how to combine **OCR, embeddings, vector databases, an
 # 🏗️ Architecture
 
 Civic AI follows a **Retrieval-Augmented Generation (RAG)** pipeline:
+
+```
+Government PDFs
+↓
+OCR (Tesseract)
+↓
+Text Extraction
+↓
+Text Chunking
+↓
+Embedding Model
+↓
+FAISS Vector Database
+↓
+LLM (Mistral via Ollama)
+↓
+Streamlit Chatbot
+```

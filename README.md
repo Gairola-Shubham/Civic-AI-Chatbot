@@ -19,3 +19,5 @@ This project demonstrates how to combine **OCR, embeddings, vector databases, an
 **Assistant**: The Delhi government allocated approximately 21.57% of its total budget to education in 2024.
 
 **Source**: Budget Speech 2024–25
+
+---

@@ -114,3 +114,20 @@ Pull the model:
 ```bash
 ollama pull mistral
 ```
+
+Start the Ollama server before running the chatbot.
+
+---
+
+# 🔒 Why Use Ollama?
+
+Using a local AI model provides:
+
+* 🛜 **Offline AI responses**
+* 🔐 **Better privacy (no cloud APIs required)**
+* ⚡ **Fast local processing**
+* 🧠 **More intelligent responses than keyword search**
+
+---
+
+# 📂 Project Structure

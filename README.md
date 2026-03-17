@@ -146,3 +146,62 @@ Civic-AI-Chatbot
 ├── requirements.txt
 └── README.md
 ```
+---
+
+# 📊 Dataset
+
+Civic AI uses publicly available Delhi government data:
+
+- ~2755 PDF documents  
+- ~5.6 GB dataset  
+- ~129,588 text chunks  
+
+---
+
+# 🌐 Data Sources
+
+Data was collected from official government portals:
+
+### 🏛 Delhi Legislative Assembly
+https://delhiassembly.delhi.gov.in  
+- Assembly proceedings  
+- Questions & answers  
+- Budget discussions  
+
+---
+
+### 💰 Budget Documents
+- Budget speeches  
+- Financial statements  
+- Budget summaries  
+
+---
+
+### 🌿 Delhi Pollution Control Committee
+https://dpcc.delhigovt.nic.in  
+- Air quality reports  
+- Pollution monitoring data  
+
+---
+
+### 🚇 Delhi Transport Department
+- Electric vehicle policies  
+- Transport initiatives  
+
+---
+
+### 📜 Gazette Notifications
+- Acts and rules  
+- Official notifications  
+
+---
+
+### 🌊 Environmental Reports
+- Yamuna river cleaning reports  
+- Sewage treatment reports  
+
+---
+
+# 📦 Installation
+
+## 1️⃣ Clone the repository

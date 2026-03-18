@@ -173,6 +173,7 @@ https://delhiassembly.delhi.gov.in
 ---
 
 ### 💰 Budget Documents
+https://finance.delhi.gov.in/
 - Budget speeches  
 - Financial statements  
 - Budget summaries  
@@ -187,12 +188,14 @@ https://dpcc.delhigovt.nic.in
 ---
 
 ### 🚇 Delhi Transport Department
+https://transport.delhi.gov.in/
 - Electric vehicle policies  
 - Transport initiatives  
 
 ---
 
 ### 📜 Gazette Notifications
+https://it.delhi.gov.in/it/gazette-notification
 - Acts and rules  
 - Official notifications  
 

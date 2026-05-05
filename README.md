@@ -1,318 +1,177 @@
-# 🏛 Civic AI – Delhi Government Transparency Chatbot
+# 🚀 Civic AI – Multi-State Government Transparency Chatbot
 
-![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
-![Platform](https://img.shields.io/badge/Platform-Local%20AI-lightgrey)
-![Status](https://img.shields.io/badge/Project-Active-success)
+## 📌 Overview
 
-**Civic AI** is a lightweight **AI-powered document chatbot** that enables users to query **Delhi government data** using natural language.
-
-It processes thousands of official PDFs and uses **semantic search + AI (LLM)** to retrieve accurate answers along with document sources.
-
-This project demonstrates how to combine **OCR, embeddings, vector databases, and language models** to build a real-world AI system.
+Civic AI is an intelligent chatbot system designed to simplify access to complex government data such as economic surveys, budget reports, and policy documents.
+It allows users to ask questions in natural language and receive accurate, source-based answers using a combination of retrieval techniques and a local language model.
 
 ---
 
-# 🎥 Example Interaction
+## 🎯 Key Features
 
-**User**: What is Delhi's education budget for 2024?
-
-**Assistant**: The Delhi government allocated approximately 21.57% of its total budget to education in 2024.
-
-**Source**: Budget Speech 2024–25
-
----
-
-# ✨ Features
-
-### 🔍 Semantic Search
-
-* Finds relevant information using **meaning-based search**, not just keywords
-
-### 🤖 AI Answer Generation
-
-* Uses **Mistral LLM** to generate human-like responses
-
-### 🌐 Multilingual Support
-
-* Supports both **Hindi and English queries**
-
-### 📄 Source Citation
-
-* Displays document references for transparency
-
-### 💻 Web Chatbot Interface
-
-* Built using **Streamlit**
-
-### ⚡ Fast Retrieval
-
-* Uses **FAISS vector database** for efficient search
+* 💬 Natural language query support
+* 🔍 Hybrid Retrieval (FAISS + BM25)
+* 🧠 Retrieval-Augmented Generation (RAG)
+* 🤖 Local LLM (Phi-3 via Ollama)
+* 📌 Source-based answers (state, domain, page)
+* 👤 User login, signup, and profile management
+* 🗂 Chat history support
+* ⚡ Fast backend using FastAPI
 
 ---
 
-# 🏗️ Architecture
+## 🏗 System Architecture
 
-Civic AI follows a **Retrieval-Augmented Generation (RAG)** pipeline:
+The system follows a layered architecture:
+
+User → Frontend (React) → FastAPI Backend → Hybrid Retrieval (FAISS + BM25) → LLM (Phi-3) → Response
+
+---
+
+## 🧠 How It Works
+
+1. User enters a query in the chat interface
+2. Query is sent to backend via REST API
+3. Backend processes query using hybrid retrieval:
+
+   * FAISS (semantic search)
+   * BM25 (keyword search)
+4. Relevant document chunks are retrieved
+5. Context is passed to the LLM (Phi-3)
+6. LLM generates final response
+7. Response + sources displayed to user
+
+---
+
+## ⚙️ Tech Stack
+
+### 🔹 Frontend
+
+* React.js
+* HTML, CSS
+
+### 🔹 Backend
+
+* FastAPI (Python)
+* REST API
+
+### 🔹 AI / NLP
+
+* Sentence Transformers (E5 Model)
+* FAISS (Vector Search)
+* BM25 (Keyword Search)
+* Ollama (Local LLM - Phi-3)
+
+---
+
+## 📂 Project Structure
 
 ```
-Government PDFs
-↓
-OCR (Tesseract)
-↓
-Text Extraction
-↓
-Text Chunking
-↓
-Embedding Model
-↓
-FAISS Vector Database
-↓
-LLM (Mistral via Ollama)
-↓
-Streamlit Chatbot
-```
----
-
-# ⚙️ Technologies Used
-
-| Technology              | Purpose                          |
-|------------------------|----------------------------------|
-| Python                 | Core programming language        |
-| PyMuPDF                | PDF text extraction              |
-| Tesseract OCR          | Extract text from scanned PDFs   |
-| Sentence Transformers  | Generate embeddings              |
-| FAISS                  | Vector similarity search         |
-| Ollama                 | Run LLM locally                  |
-| Mistral                | Language model                   |
-| Streamlit              | Web interface                    |
-
----
-
-# 🧠 AI Integration (Ollama)
-
-Civic AI uses a **local AI model** powered by **Ollama**.
-
-This allows the chatbot to behave like a real AI system instead of relying only on predefined responses.
-
-### Example
-
-**User:**
-What is Delhi's EV policy?
-
-**Assistant:**
-Delhi's Electric Vehicle Policy focuses on promoting electric mobility, reducing pollution, and providing incentives for EV adoption.
-
----
-
-# ⚙️ Setup Ollama
-
-Install **Ollama**:
-
-https://ollama.com
-
-Pull the model:
-```bash
-ollama pull mistral
-```
-
-Start the Ollama server before running the chatbot.
-
----
-
-# 🔒 Why Use Ollama?
-
-Using a local AI model provides:
-
-* 🛜 **Offline AI responses**
-* 🔐 **Better privacy (no cloud APIs required)**
-* ⚡ **Fast local processing**
-* 🧠 **More intelligent responses than keyword search**
-
----
-
-# 📂 Project Structure
-```text
-Civic-AI-Chatbot
+Civic-AI/
 │
-├── scripts/
-│ ├── extract_and_clean.py
-│ ├── prepare_chunks.py
-│ ├── build_vector_db.py
-│ ├── query_engine_llm.py
-│ ├── full_pipeline.py
-│ ├── classify_pdfs.py
-│
-├── app.py # Streamlit chatbot interface
-├── data_raw/ # Raw PDFs (not uploaded)
-├── data_processed/ # Extracted text
-├── requirements.txt
+├── app.py                # FastAPI backend
+├── requirements.txt     # Dependencies
+├── scripts/             # Data preprocessing & embedding scripts
+├── frontend/            # React frontend
+├── .gitignore
 └── README.md
 ```
----
-
-# 📊 Dataset
-
-Civic AI uses publicly available Delhi government data:
-
-- ~2755 PDF documents  
-- ~5.6 GB dataset  
-- ~129,588 text chunks  
 
 ---
 
-# 🌐 Data Sources
+## 🧪 Installation & Setup
 
-Data was collected from official government portals:
+### 1️⃣ Clone the Repository
 
-### 🏛 Delhi Legislative Assembly
-https://delhiassembly.delhi.gov.in  
-- Assembly proceedings  
-- Questions & answers  
-- Budget discussions  
-
----
-
-### 💰 Budget Documents
-https://finance.delhi.gov.in/
-- Budget speeches  
-- Financial statements  
-- Budget summaries  
-
----
-
-### 🌿 Delhi Pollution Control Committee
-https://dpcc.delhigovt.nic.in  
-- Air quality reports  
-- Pollution monitoring data  
-
----
-
-### 🚇 Delhi Transport Department
-https://transport.delhi.gov.in/
-- Electric vehicle policies  
-- Transport initiatives  
-
----
-
-### 📜 Gazette Notifications
-https://it.delhi.gov.in/it/gazette-notification
-- Acts and rules  
-- Official notifications  
-
----
-
-### 🌊 Environmental Reports
-- Yamuna river cleaning reports  
-- Sewage treatment reports  
-
----
-
-# 📦 Installation
-
-## 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/your-username/civic-ai-chatbot.git
-cd civic-ai-chatbot
+git clone https://github.com/your-username/civic-ai.git
+cd civic-ai
 ```
+
 ---
 
-## 2️⃣ Create a virtual environment
+### 2️⃣ Create Virtual Environment
+
 ```bash
 python -m venv venv
+venv\Scripts\activate   # Windows
 ```
 
-Activate it
-
-### Windows
-```bash
-venv\Scripts\activate
-```
 ---
 
-## 3️⃣ Install dependencies
+### 3️⃣ Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ---
 
-## 4️⃣ Install Tesseract OCR
+### 4️⃣ Run Backend
 
-Download and install from:  
-https://github.com/tesseract-ocr/tesseract  
-
-Install Hindi language pack as well.
-
----
-
-## 5️⃣ Run the chatbot
 ```bash
-streamlit run app.py
+uvicorn app:app --reload
 ```
 
 ---
 
-# ▶️ Running the Chatbot
+### 5️⃣ Run Frontend
 
-Open in browser:
 ```bash
-http://localhost:8501
+cd frontend
+npm install
+npm start
 ```
 
 ---
 
-# 📌 Example Queries
+## 📊 Data Sources
 
-Civic AI can answer queries such as:
-
-* What is Delhi's education budget for 2024?  
-* What measures has Delhi taken to control pollution?  
-* What is the Yamuna cleaning plan?  
-* Delhi EV policy  
-* दिल्ली में शिक्षा बजट कितना है?  
+* Delhi Economic Survey
+* Government Open Data (data.gov.in)
+* NITI Aayog Reports
+* Other official government datasets
 
 ---
 
-# 🧠 How It Works
+## ⚠️ Limitations
 
-1. The system processes government PDFs and extracts text.
-
-2. Text is divided into smaller chunks.
-
-3. Each chunk is converted into embeddings.
-
-4. FAISS stores embeddings for fast retrieval.
-
-5. User queries are matched with relevant chunks.
-
-6. The LLM generates answers based on retrieved context.
+* Limited dataset coverage
+* No multilingual support
+* Chat history stored locally
+* Performance depends on data quality
 
 ---
 
-# 🔮 Future Improvements
+## 🚀 Future Improvements
 
-Possible upgrades for the system:
-
-* 🌐 Online deployment  
-* 🔍 Better query filtering  
-* 📄 Improved document coverage  
-* 💻 Enhanced UI  
-
----
-
-# 🎯 Purpose of This Project
-
-This project was built to:
-
-* Apply **AI to real-world government data**
-* Build a **RAG-based chatbot system**
-* Improve **public data accessibility**
-* Demonstrate **end-to-end AI pipeline development**
+* 🌐 Multilingual support
+* 🎙 Voice-based interaction
+* ☁ Cloud deployment
+* 📈 Automated evaluation metrics
+* 🔐 Secure authentication (JWT)
 
 ---
 
-# 👥 Team
+## 👨‍💻 Contributors
 
-- Shubham Gairola  
-- Amar Bammi  
-- Rishita  
+* Shubham Gairola
+* Amar Bammi
+* Rishita
+
+---
+
+## 📜 License
+
+This project is developed for academic purposes.
+
+---
+
+## 🙌 Acknowledgements
+
+* FastAPI Documentation
+* FAISS Library
+* Sentence Transformers
+* Ollama (Phi-3 Model)
+
+---

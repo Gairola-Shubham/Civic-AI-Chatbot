@@ -136,28 +136,6 @@ We collected data from official government portals to ensure authenticity and re
 
 ---
 
-## 📸 Screenshots
-
-> Add your project screenshots here
-
-### 🔹 Login Page
-
-![Login](screenshots/login.png)
-
-### 🔹 Chat Interface
-
-![Chat](screenshots/chat.png)
-
-### 🔹 Profile Page
-
-![Profile](screenshots/profile.png)
-
-### 🔹 Example Response with Sources
-
-![Response](screenshots/response.png)
-
----
-
 ## ⚠️ Limitations
 
 * Limited dataset coverage

@@ -22,8 +22,6 @@ It allows users to ask questions in natural language and receive accurate, sourc
 
 ## 🏗 System Architecture
 
-The system follows a layered architecture:
-
 User → Frontend (React) → FastAPI Backend → Hybrid Retrieval (FAISS + BM25) → LLM (Phi-3) → Response
 
 ---
@@ -69,10 +67,10 @@ User → Frontend (React) → FastAPI Backend → Hybrid Retrieval (FAISS + BM25
 ```
 Civic-AI/
 │
-├── app.py                # FastAPI backend
-├── requirements.txt     # Dependencies
-├── scripts/             # Data preprocessing & embedding scripts
-├── frontend/            # React frontend
+├── app.py
+├── requirements.txt
+├── scripts/
+├── frontend/
 ├── .gitignore
 └── README.md
 ```
@@ -88,8 +86,6 @@ git clone https://github.com/your-username/civic-ai.git
 cd civic-ai
 ```
 
----
-
 ### 2️⃣ Create Virtual Environment
 
 ```bash
@@ -97,23 +93,17 @@ python -m venv venv
 venv\Scripts\activate   # Windows
 ```
 
----
-
 ### 3️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
 ### 4️⃣ Run Backend
 
 ```bash
 uvicorn app:app --reload
 ```
-
----
 
 ### 5️⃣ Run Frontend
 
@@ -127,10 +117,44 @@ npm start
 
 ## 📊 Data Sources
 
+We collected data from official government portals to ensure authenticity and reliability:
+
 * Delhi Economic Survey
-* Government Open Data (data.gov.in)
+  https://delhiplanning.delhi.gov.in/
+
+* Ministry of Statistics and Programme Implementation (MOSPI)
+  https://mospi.gov.in/
+
 * NITI Aayog Reports
-* Other official government datasets
+  https://www.niti.gov.in/
+
+* Open Government Data Platform (India)
+  https://data.gov.in/
+
+* Ministry of Finance (Budget Data)
+  https://www.indiabudget.gov.in/
+
+---
+
+## 📸 Screenshots
+
+> Add your project screenshots here
+
+### 🔹 Login Page
+
+![Login](screenshots/login.png)
+
+### 🔹 Chat Interface
+
+![Chat](screenshots/chat.png)
+
+### 🔹 Profile Page
+
+![Profile](screenshots/profile.png)
+
+### 🔹 Example Response with Sources
+
+![Response](screenshots/response.png)
 
 ---
 
@@ -145,7 +169,7 @@ npm start
 
 ## 🚀 Future Improvements
 
-* 🌐 Multilingual support
+* 🌐 Multilingual support (Hindi + English)
 * 🎙 Voice-based interaction
 * ☁ Cloud deployment
 * 📈 Automated evaluation metrics
